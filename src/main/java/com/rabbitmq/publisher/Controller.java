@@ -14,9 +14,7 @@ public class Controller {
 
     @GetMapping("/forest/queue")
     public String forestPublish() {
-        rabbitTemplate.convertAndSend(EXCHANGE, "forest.key.#", "RabbitMQ + Springboot = Success");
-        return "message sent";
-//        rabbitTemplate.convertAndSend(EXCHANGE, "forest.key.#", "RabbitMQ and SpringBoot Test");
-//        return "message sending";
+        rabbitTemplate.convertAndSend(EXCHANGE, "forest.key.#", "RabbitMQ and SpringBoot Test");
+        return "message sending";
     }
 }
